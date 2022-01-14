@@ -11798,7 +11798,11 @@ img.bg-img {
   .bg-img-mobile {
     display: none;
   }
+}
+
+@media (min-width: 992px) {
   .logo-container {
+    display: block;
     position: absolute;
     background-color: black;
     z-index: 2;
