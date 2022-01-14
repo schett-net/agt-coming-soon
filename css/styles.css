@@ -11702,7 +11702,7 @@ img.bg-img {
     background-size: cover;
   }
 
-  body img {
+  body .bg-img {
     display: none;
   }
 }
@@ -11787,23 +11787,20 @@ img.bg-img {
 }
 
 .logo-container {
-  background-color: black;
-  position: absolute;
-  z-index: 2;
-  right: 0;
-  top: 50%;
-  width: 12rem;
-  height: 6rem;
-  padding-left: 1rem;
-  transform: translateY(-50%);
-  border-top-left-radius: 4rem;
-  border-bottom-left-radius: 4rem;
+  display: none;
+}
+
+.bg-img-mobile {
+  width: 6rem;
 }
 
 @media (min-width: 992px) {
+  .bg-img-mobile {
+    display: none;
+  }
   .logo-container {
-    background-color: black;
     position: absolute;
+    background-color: black;
     z-index: 2;
     right: 0;
     top: 50%;
