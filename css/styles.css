@@ -96,6 +96,11 @@ body {
   background-color: var(--bs-body-bg);
   -webkit-text-size-adjust: 100%;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  background: url("../assets/img/bg.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 hr {
@@ -11671,16 +11676,34 @@ body {
   height: 100%;
   position: relative;
 }
-body:before {
-  content: "";
-  position: fixed;
-  top: 0;
-  left: 0;
-  height: 100%;
-  width: 100%;
-  background-color: #2151a1;
-  opacity: 0.7;
-  z-index: 1;
+
+.master {
+  background-color: #030810;
+  width: 70rem;
+  opacity: 1;
+  z-index: 2;
+
+  padding: 2rem 1rem 2rem 1rem;
+
+  opacity: 0.94;
+}
+
+@media (max-width: 992px) {
+  .master {
+    width: 100vw;
+  }
+}
+
+.master .master-content {
+  max-width: 60rem;
+  text-align: center;
+}
+
+@media (min-width: 992px) {
+  .master .master-content {
+    max-width: 100%;
+    text-align: center;
+  }
 }
 
 img.bg-img {
@@ -11696,12 +11719,6 @@ img.bg-img {
 }
 
 @media (pointer: coarse) and (hover: none) {
-  body {
-    background: url("../assets/img/bg.jpg") #2151a1 no-repeat center center
-      scroll;
-    background-size: cover;
-  }
-
   body .bg-img {
     display: none;
   }
@@ -11727,7 +11744,7 @@ img.bg-img {
 }
 .masthead .masthead-content {
   position: relative;
-  max-width: 40rem;
+  max-width: 70rem;
   padding-top: 5rem;
   padding-bottom: 5rem;
 }
@@ -11803,8 +11820,8 @@ img.bg-img {
 @media (min-width: 992px) {
   .logo-container {
     display: block;
-    position: absolute;
-    background-color: black;
+    position: fixed;
+    background-color: #030810;
     z-index: 2;
     right: 0;
     top: 50%;
